@@ -1,0 +1,179 @@
+Python Special (Dunder) Methods
+1. __init__()
+The __init__() method is the constructor in Python. It runs automatically when an object is created and is used to initialize object attributes.
+
+2. __str__()
+The __str__() method returns a readable string representation of an object and is used by the print() function.
+
+3. __repr__()
+The __repr__() method returns the official string representation of an object, mainly for debugging and development purposes.
+
+4. __len__()
+The __len__() method defines what len() returns when used on an object.
+
+5. __eq__()
+The __eq__() method defines how two objects are compared using ==.
+
+6. __add__()
+The __add__() method defines how objects behave when the + operator is used.
+
+7. __getitem__()
+The __getitem__() method allows objects to support indexing using [].
+
+8. __setitem__()
+The __setitem__() method allows modifying values in an object using indexing.
+
+9. __contains__()
+The __contains__() method defines behavior for the in operator.
+
+10. __bool__()
+The __bool__() method defines how an object is evaluated in Boolean contexts like if statements.
+
+11. __call__()
+The __call__() method allows an object to behave like a function.
+
+12. __del__()
+The __del__() method is called when an object is about to be destroyed and is used for cleanup tasks.
+
+
+# 1. __init__()
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+# 2. __str__()
+class Book:
+    def __init__(self, title):
+        self.title = title
+
+    def __str__(self):
+        return self.title
+
+
+# 3. __repr__()
+class Product:
+    def __init__(self, name):
+        self.name = name
+
+    def __repr__(self):
+        return f"Product('{self.name}')"
+
+
+# 4. __len__()
+class Playlist:
+    def __init__(self, songs):
+        self.songs = songs
+
+    def __len__(self):
+        return len(self.songs)
+
+
+# 5. __eq__()
+class StudentCompare:
+    def __init__(self, index):
+        self.index = index
+
+    def __eq__(self, other):
+        return self.index == other.index
+
+
+# 6. __add__()
+class Money:
+    def __init__(self, amount):
+        self.amount = amount
+
+    def __add__(self, other):
+        return Money(self.amount + other.amount)
+
+
+# 7. __getitem__()
+class NumbersGet:
+    def __init__(self, values):
+        self.values = values
+
+    def __getitem__(self, index):
+        return self.values[index]
+
+
+# 8. __setitem__()
+class NumbersSet:
+    def __init__(self, values):
+        self.values = values
+
+    def __setitem__(self, index, value):
+        self.values[index] = value
+
+
+# 9. __contains__()
+class Cart:
+    def __init__(self, items):
+        self.items = items
+
+    def __contains__(self, item):
+        return item in self.items
+
+
+# 10. __bool__()
+class Account:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def __bool__(self):
+        return self.balance > 0
+
+
+# 11. __call__()
+class Greeter:
+    def __call__(self, name):
+        return f"Hello {name}"
+
+
+# 12. __del__()
+class FileHandler:
+    def __init__(self, name):
+        self.name = name
+        print("File opened")
+
+    def __del__(self):
+        print("File closed")
+
+
+# -----------------------------
+# TESTING ALL CLASSES
+# -----------------------------
+
+s = Student("Alice", 20)
+b = Book("Python Guide")
+p = Product("Laptop")
+
+playlist = Playlist(["A", "B", "C"])
+print(len(playlist))
+
+s1 = StudentCompare("001")
+s2 = StudentCompare("001")
+print(s1 == s2)
+
+m1 = Money(100)
+m2 = Money(200)
+m3 = m1 + m2
+
+nums = NumbersGet([1, 2, 3])
+print(nums[1])
+
+nums2 = NumbersSet([5, 6, 7])
+nums2[1] = 99
+print(nums2.values)
+
+cart = Cart(["milk", "bread"])
+print("milk" in cart)
+
+acc = Account(50)
+print(bool(acc))
+
+g = Greeter()
+print(g("Greta"))
+
+file = FileHandler("data.txt")
+del file
