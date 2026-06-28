@@ -1,1 +1,118 @@
 # Special-Methods-Assignment
+
+
+Method Does What Example
+__init__ Constructor Cat with 
+name and 
+age
+__str__ Pretty print Movie title 
+and director
+__repr__ Debug info Recreate the 
+Movie
+__len__ Length Suitcase 
+item count
+__eq__ Equal check Employee by 
+ID
+__add__ Addition Complex 
+numbers
+__sub__ Subtraction Complex 
+numbers
+__mul__ Multiply Complex 
+scaling
+__getitem__ Index access Mixtape 
+tracks
+__setitem__ Index update Edit Mixtape
+__contains__ Check in Pantry 
+contents
+__call__ Call like 
+function
+Scaler
+__iter__ Loop with for Countup 
+timer
+__next__ Next item Continue 
+countup
+__bool__ True/False PiggyBank 
+has coins?
+__del__ Cleanup hint TempDir
+Method Does What Example
+__init__ Constructor Cat with 
+name and 
+age
+__str__ Pretty print Movie title 
+and director
+__repr__ Debug info Recreate the 
+Movie
+__len__ Length Suitcase 
+item count
+__eq__ Equal check Employee by 
+ID
+__add__ Addition Complex 
+numbers
+__sub__ Subtraction Complex 
+numbers
+__mul__ Multiply Complex 
+scaling
+__getitem__ Index access Mixtape 
+tracks
+__setitem__ Index update Edit Mixtape
+__contains__ Check in Pantry 
+contents
+__call__ Call like 
+function
+Scaler
+__iter__ Loop with for Countup 
+timer
+__next__ Next item Continue 
+countup
+__bool__ True/False PiggyBank 
+has coins?
+__del__ Cleanup hint TempDir
+Method Does What Example
+__init__ Constructor Cat with 
+name and 
+age
+__str__ Pretty print Movie title 
+and director
+__repr__ Debug info Recreate the 
+Movie
+__len__ Length Suitcase 
+item count
+__eq__ Equal check Employee by 
+ID
+__add__ Addition Complex 
+numbers
+__sub__ Subtraction Complex 
+numbers
+__mul__ Multiply Complex 
+scaling
+__getitem__ Index access Mixtape 
+tracks
+__setitem__ Index update Edit Mixtape
+__contains__ Check in Pantry 
+contents
+__call__ Call like 
+function
+Scaler
+__iter__ Loop with for Countup 
+timer
+__next__ Next item Continue 
+countup
+__bool__ True/False PiggyBank 
+has coins?
+__del__ Cleanup hint TempDir
+pip install notebook
+pip install notebook
+jupyter notebook 
+Python_Special_Methods_A.ipynb
+class Complex:
+def init(self, real, imag):
+self.real = real
+self.imag = imag
+def add(self, other):
+return Complex(self.real + other.real, self.imag + 
+other.imag)
+def str(self):
+return f"{self.real} + {self.imag}i"
+c1 = Complex(2, 3)
+c2 = Complex(1, 4)
+print(c1 + c2) # 3 + 7i
